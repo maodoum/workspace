@@ -1,0 +1,81 @@
+<%= form_for(worker_message) do |f| %>
+  <% if worker_message.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(worker_message.errors.count, "error") %> prohibited this worker_message from being saved:</h2>
+
+      <ul>
+      <% worker_message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :worker_id %>
+    <%= f.text_field :worker_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :worker_name %>
+    <%= f.text_field :worker_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sex %>
+    <%= f.select :sex, options_for_select([  ['男','男'], ['女', '女']])%> 
+  
+  </div>
+  </div>
+
+  <div class="field" style="display:none">
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthday %>
+    <%= f.date_select :birthday , :start_year=>1980%>
+  </div>
+
+  <div class="field">
+    <%= f.label :role %>
+    <%= f.select :role, options_for_select([ ['请选择','请选择'],['管理员','管理员'], ['取送人员', '取送人员'], ['加工厂人员', '加工厂人员'], ['管理员4', '管理员4'] ])%>
+  </div>
+
+  <div class="field">
+    <%= f.label :academic %>
+    <%= f.select :academic, options_for_select([['请选择','请选择'], ['大专','大专'], ['本科毕业', '本科毕业'], ['本科结业', '本科结业'], ['本科及以上', '本科及以上'] ])%>
+  </div>
+
+  <div class="field">
+    <%= f.label :factory_id %>
+    <%= f.number_field :factory_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :region %>
+    <%= f.text_field :region %>
+  </div>
+
+  <div class="field" style="display:none">
+    <%= f.label :delFlag %>
+    <%= f.text_field :delFlag %>
+  </div>
+
+  <div class="field" style="display:none">
+    <%= f.label :S_01 %>
+    <%= f.text_field :S_01 %>
+  </div>
+
+  <div class="field" style="display:none">
+ 
+    <%= f.label :S_o2 %>
+    <%= f.text_field :S_o2 %>
+    
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+= simple_form_for(@courier) do |f|
+  = f.error_notification
+
+  .row	  
+    table.table.table-striped
+      tr
+        td width='80px' 名字
+        td width='100px' = @courier.name
+        td 
+
+  .test
+    = f.association :stations, as: :check_boxes, include_blank: false
+
+  .form-actions
+    = f.button :submit

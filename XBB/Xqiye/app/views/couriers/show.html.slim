@@ -1,0 +1,38 @@
+.row
+  .col-md-12
+    .panel.panel-default
+      .panel-heading#operations
+        | 基本信息
+      .panel-body
+        table.table.table-striped
+          tr
+            td width='15%' 名字
+            td  = @courier.name
+
+.row
+  .col-md-12
+    .panel.panel-default
+      .panel-heading#operations
+        | 关联站点
+      .panel-body
+        table.table.table-striped
+          thead
+            tr
+              th width='15%' 名字
+              th width='20%' 地址
+              th width='25%' 备注
+              th
+          tbody
+            - @courier.stations.each do |station|
+              tr
+                td 
+                  = link_to station.name, station
+                td
+                  = station.address
+                td 
+                  = station.comment
+                td
+
+= link_to 'Edit', edit_courier_path(@courier)
+'|
+= link_to 'Back', couriers_path

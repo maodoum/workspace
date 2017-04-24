@@ -1,0 +1,33 @@
+<div  class="panel panel-default">
+	<div class="panel-heading">操作员</div>
+	<div class="panel-body">
+		<table class="table table table-striped" width='600px'>
+			<thead>
+				<tr>
+					<th>登录邮箱</th>
+					<th>登录次数</th>
+					<th>上次登录时间</th>
+					<th>上次登录IP</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @workeraccounts.each do |account|%>
+				<tr>
+					<td><%= account.email %></td>
+					<td><%= account.sign_in_count%></td>
+					<td><%= account.last_sign_in_at%> </td>
+					<td><%= account.last_sign_in_ip%> </td>
+					<td></td>
+					<td><%= link_to '修改密码',reset_password_workeraccount_path(account)%></td>
+					<td><%= link_to '修改',edit_workeraccount_path(account)%></td>
+				</tr>
+				<%end%>
+			</tbody>
+		</table>		
+	</div>
+	<div class="panel-footer">
+		<%= link_to '新建', new_workeraccount_path, class: 'btn btn-info btn-sm'%>
+	</div>
+
+</div>

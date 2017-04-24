@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>详细信息展示</strong>
+</p>
+
+<p>
+  <strong>Worker id:</strong>
+  <%= @worker_message.worker_id %>
+</p>
+
+<p>
+  <strong>Worker name:</strong>
+  <%= @worker_message.worker_name %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @worker_message.sex %>
+</p>
+
+<p>
+  <strong style="display:none">Age:</strong>
+  <%= @worker_message.age %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @worker_message.birthday %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @worker_message.role %>
+</p>
+
+<p>
+  <strong>Academic:</strong>
+  <%= @worker_message.academic %>
+</p>
+
+<p>
+  <strong>Factory:</strong>
+  <%= @worker_message.factory_id %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @worker_message.region %>
+</p>
+
+<p style="display:none">
+  <strong>Delflag:</strong>
+  <%= @worker_message.delFlag %>
+</p>
+
+<p style="display:none">
+  <strong>S 01:</strong>
+  <%= @worker_message.S_01 %>
+</p>
+
+<p style="display:none">
+  <strong>S o2:</strong>
+  <%= @worker_message.S_o2 %>
+</p>
+
+<%= link_to 'Edit', edit_worker_message_path(@worker_message) %> |
+<%= link_to 'Back', worker_messages_path %>

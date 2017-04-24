@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  worker_id: MyString
+  worker_name: MyString
+  sex: MyString
+  age: 1
+  birthday: 2017-04-13 16:36:03
+  role: MyString
+  academic: MyString
+  factory_id: 1
+  region: MyString
+  delFlag: MyString
+  S_01: MyString
+  S_o2: MyString
+
+two:
+  worker_id: MyString
+  worker_name: MyString
+  sex: MyString
+  age: 1
+  birthday: 2017-04-13 16:36:03
+  role: MyString
+  academic: MyString
+  factory_id: 1
+  region: MyString
+  delFlag: MyString
+  S_01: MyString
+  S_o2: MyString

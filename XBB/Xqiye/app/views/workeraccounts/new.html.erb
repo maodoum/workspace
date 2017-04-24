@@ -1,0 +1,14 @@
+<h1>New WorkerAccount</h1>
+<%= simple_form_for(@workeraccount) do |f|%>
+	<%= f.error_notification%>
+	<div class="form-inputs">
+		<%= f.input :email, required: false, autofocus: true%>
+	    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+	    <%= f.input :password_confirmation, required: true %>
+	    
+	</div>
+	<div class="form-acions">
+		<%= f.button :submit%>
+	</div>
+	<%= link_to 'Back',workeraccounts_path%>
+<% end %>

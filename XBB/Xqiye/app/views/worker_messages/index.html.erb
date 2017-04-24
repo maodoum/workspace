@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>员工信息</h1>
+
+<table width="800px" border="1">
+  <thead>
+    <tr>
+      <th>Worker</th>
+      <th>Worker name</th>
+      <th>Sex</th>
+      <th style="display:none">Age</th>
+      <th>Birthday</th>
+      <th>Role</th>
+      <th>Academic</th>
+      <th>Factory</th>
+      <th>Region</th>
+      <th style="display:none">Delflag</th>
+      <th style="display:none">S 01</th>
+      <th style="display:none">S o2</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @worker_messages.each do |worker_message| %>
+      <tr>
+        <td><%= worker_message.worker_id %></td>
+        <td><%= worker_message.worker_name %></td>
+        <td><%= worker_message.sex %></td> 
+        <td style="display:none"><%= worker_message.age %></td> 
+        <td><%= worker_message.birthday %></td>
+        <td><%= worker_message.role %></td>
+        <td><%= worker_message.academic %></td>
+        <td><%= worker_message.factory_id %></td>
+        <td><%= worker_message.region %></td>
+        <td style="display:none"><%= worker_message.delFlag %></td>
+        <td style="display:none"><%= worker_message.S_01 %></td>
+        <td style="display:none"><%= worker_message.S_o2 %></td>
+        <td><%= link_to 'Show', worker_message %></td>
+        <td><%= link_to 'Edit', edit_worker_message_path(worker_message) %></td>
+        <td><%= link_to 'Destroy', worker_message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Worker Message', new_worker_message_path %>
